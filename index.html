@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Player</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+    <div class="neon-cd-background">
+        <div class="neon-cd">
+            <div class="cd-inner-gradient"></div>
+            <div class="cd-center-hole"></div>
+            <div class="cd-neon-ring-outer"></div>
+            <div class="cd-neon-ring-inner"></div>
+        </div>
+    </div>
+
+    <div class="player-container">
+        
+        <div class="image-area">
+            <img id="player-image" src="" alt="表示画像">
+        </div>
+
+        <div class="info-area">
+            <p id="player-title" class="title">タイトル</p>
+            <p class="artist">アーティスト名</p> 
+        </div>
+
+        <div class="progress-bar-container">
+            <div id="progress-bar-fill" class="progress-bar-fill"></div>
+        </div>
+        <div class="time-display">
+            <span id="current-time">0:00</span>
+            <span id="total-time">0:10</span> 
+        </div>
+
+        <div class="controls">
+            <button id="prev-button" class="player-button">
+                <i class="material-icons">skip_previous</i>
+            </button>
+            <button id="play-pause-button" class="player-button large">
+                <i class="material-icons">play_arrow</i>
+            </button>
+            <button id="next-button" class="player-button">
+                <i class="material-icons">skip_next</i>
+            </button>
+        </div>
+
+        <div class="volume-control">
+            <i class="material-icons">volume_down</i>
+            <input type="range" class="volume-slider" min="0" max="100" value="70">
+            <i class="material-icons">volume_up</i>
+        </div>
+
+        <button id="share-button" class="airplay-button">
+            <i class="material-icons">share</i> 共有
+        </button>
+    </div> 
+    
+    <div class="detail-section">
+        <h2 id="detail-title">詳細情報</h2>
+        <div id="detail-content">
+            <p>ここに各コンテンツの詳細情報が表示されます。</p>
+            <p>自己紹介や歌詞など、様々な内容を追加できます。</p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
