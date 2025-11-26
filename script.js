@@ -1,48 +1,38 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    /*
-    * ===============================================
-    * ★ ここを編集してください ★
-    * ===============================================
-    *
-    * 表示したいコンテンツのリストです。
-    * { } のカタマリをコピー＆ペーストすれば、
-    * 好きなだけコンテンツを追加・削除できます。
-    *
-    */
     const contents = [
         { 
-            title: "自己紹介", // ← 大きいタイトル
-            artist: "", // ← アーティスト名（小さい文字）
-            image: "/Users/yuuma/Downloads/Google Gemini Generated Image.png", // ← 画像のURL
-            link: "", // ← 画像クリック時のリンク先
-            details: "私の名前は齊藤優瞬[さいとうゆうま]です。難しい漢字ばかりで小学校の習字の時にはとても苦労をしました笑\n私は'人間の行動力は楽しい'から来ていると考えています。\nですので私は楽しいをモットーにさらに面白く、楽しく改善できるのではと常に考えて生活しています。\n動画なども伝えたいことをしっかりと捉えどうすればみんなが見てもらえるか、最初の3秒で決めに行きます。\n何かイベントなどでどうすればもっと伝わるかなど困ることがあったらご連絡ください！\nFacebookは2曲次で👋" // ← 詳細情報。 \n で改行されます
+            title: "自己紹介",
+            artist: "",
+            image: "./myicon.png",
+            link: "",
+            details: "私の名前は齊藤優瞬[さいとうゆうま]です。難しい漢字ばかりで小学校の習字の時にはとても苦労をしました笑\n私は'人間の行動力は楽しい'から来ていると考えています。\nですので私は楽しいをモットーにさらに面白く、楽しく改善できるのではと常に考えて生活しています。\n動画なども伝えたいことをしっかりと捉えどうすればみんなが見てもらえるか、最初の3秒で決めに行きます。\n何かイベントなどでどうすればもっと伝わるかなど困ることがあったらご連絡ください！\nFacebookは2曲次で👋"
         },
         { 
-            title: "私の通っている大学『iU』", // ← 大きいタイトル
-            artist: "情報経営イノベーション専門職大学", // ← アーティスト名（小さい文字）
-            image: "https://gateway.guide/wp-content/uploads/2024/04/338690348_6171625642883693_3271966848565495560_n.jpg", // ← 画像のURL
-            link: "https://www.i-u.ac.jp/", // ← 画像クリック時のリンク先
-            details: "私が現在通っているiU\n 正式名称『情報経営イノベーション専門職大学』です.\n設立7年目の大学でいい意味で何でもありで自分の好きなことを学べます。\n楽しいという感情を大切に,主体的に学習を進めています。" // ← 詳細情報。 \n で改行されます
+            title: "私の通っている大学『iU』",
+            artist: "情報経営イノベーション専門職大学",
+            image: "https://gateway.guide/wp-content/uploads/2024/04/338690348_6171625642883693_3271966848565495560_n.jpg",
+            link: "https://www.i-u.ac.jp/",
+            details: "私が現在通っているiU\n 正式名称『情報経営イノベーション専門職大学』です.\n設立7年目の大学でいい意味で何でもありで自分の好きなことを学べます。\n楽しいという感情を大切に,主体的に学習を進めています。"
         },
         { 
-            title: "私のFacebook", // ← 大きいタイトル
-            artist: "SNSアカウント", // ← アーティスト名（小さい文字）
-            image: "/Users/yuuma/Downloads/facebookアイコン.png", // ← 画像のURL
-            link: "https://www.facebook.com/share/19rjzq1cc8/?mibextid=wwXIfr", // ← 画像クリック時のリンク先
-            details: "Facebookの私のページです。日常の出来事や、イベント情報などを投稿しています。ぜひフォローしてください！\n最近は動かせていないので積極的に動かそうと思います💦\niUの情報や活動を世間に伝えていこうと思います！" // ← 詳細情報。 \n で改行されます
+            title: "私のFacebook",
+            artist: "SNSアカウント",
+            image: "./facebookicon.png",
+            link: "https://www.facebook.com/share/19rjzq1cc8/?mibextid=wwXIfr",
+            details: "Facebookの私のページです。日常の出来事や、イベント情報などを投稿しています。ぜひフォローしてください！\n最近は動かせていないので積極的に動かそうと思います💦\niUの情報や活動を世間に伝えていこうと思います！"
         },
         { 
             title: "私のInstagram", 
             artist: "フォローしてね！",
-            image: "/Users/yuuma/Downloads/インスタアイコン.png",
+            image: "./instagramicon.png",
             link: "https://www.instagram.com/o6y__4?igsh=YjE5cmR6NmUzYWkw&utm_source=qr",
             details: "Instagramでは、主にストーリーを投稿しています。\n滅多には投稿しませんが、旅行など休暇の様子をあげています。\nプライベートが気になる方は是非！"
         },
         { 
             title: "私のTik Tok", 
             artist: "o6y__a",
-            image: "/Users/yuuma/Downloads/TikTokアイコン.png",
+            image: "./tiktokicon.png",
             link: "https://www.tiktok.com/@o6y__4?_r=1&_t=ZS-91YHvGS7Am4",
             details: "TikTokでは、面白いをどれだけ短く伝えられるかが大切だと思います。\n最近は動画編集などに挑戦しているため、面白いと感じた構図を投稿して世間からの評価を見ています。またダンス動画も投稿していてダンスの素晴らしさを伝えようと考えています。\n僕の楽しいを具現化したようなアカウントなので興味を持ってもらえたらフォローしていただけると幸いです！"
         },
@@ -54,11 +44,6 @@ document.addEventListener('DOMContentLoaded', () => {
             details: "僕が大好きなK-popアイドルであるTWICEです。\nダンスの揃い具合が素晴らしく、メンバーのそれぞれの個性が違うことでより味を出しているこのグループ、プライベートの動画など見ていてとても面白いです！\n僕の最推しはtzuyuです。\nマンネ(末っ子)であり、グループみんなから愛され可愛らしいですが、ライブで魅せるあのギャップに惚れました。\n興味を持たれた方、是非一緒にライブに行きましょう！\n音楽、ダンスの素晴らしさ、そして推しが与えてくれる明日への活力を貰いに行きましょう！",
         }
     ];
-    // ★ 編集エリアはここまで ★
-    // ===============================================
-
-
-    // 2. HTML要素の取得
     const playerImage = document.getElementById('player-image');
     const imageArea = document.querySelector('.image-area'); 
     const playerTitle = document.getElementById('player-title');
@@ -73,31 +58,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const detailTitle = document.getElementById('detail-title');
     const detailContent = document.getElementById('detail-content');
 
-    // 3. 状態変数
     let currentContentIndex = 0; 
     let isPlaying = false;       
     
-    // 時間はミリ秒単位で管理
-    const autoAdvanceDuration = 10000; // 10秒 = 10,000ミリ秒
-    const updateInterval = 100;      // 100ミリ秒（0.1秒）ごとに更新（滑らかさ）
+    const autoAdvanceDuration = 10000;
+    const updateInterval = 100;
     
     let progressInterval;        
     let elapsedTime = 0;         
 
-    // 4. コンテンツ表示を更新する関数
     function updateContent() {
         const content = contents[currentContentIndex];
-        
-        // テキストと画像を更新
+
         playerImage.src = content.image;
         playerTitle.textContent = content.title;
         playerArtist.textContent = content.artist; 
         
-        // 詳細情報を更新
+
         detailTitle.textContent = content.title + "の詳細"; 
         detailContent.textContent = content.details; 
 
-        // 画像エリアにクリックイベントを設定
         imageArea.style.cursor = 'pointer'; 
         imageArea.onclick = () => {
             if (isPlaying) {
@@ -107,7 +87,6 @@ document.addEventListener('DOMContentLoaded', () => {
         };
     }
 
-    // 5. プログレスバーと時間の更新（0.1秒ごとに呼ばれる）
     function updateProgressBar() {
         elapsedTime += updateInterval; 
         
@@ -122,14 +101,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // 時間をMM:SS形式にフォーマットするヘルパー関数
     function formatTime(seconds) {
         const min = Math.floor(seconds / 60);
         const sec = seconds % 60;
         return `${min}:${sec < 10 ? '0' : ''}${sec}`;
     }
 
-    // 6. 再生開始
     function startPlaying() {
         if (isPlaying) return; 
         isPlaying = true;
@@ -140,7 +117,6 @@ document.addEventListener('DOMContentLoaded', () => {
         progressInterval = setInterval(updateProgressBar, updateInterval);
     }
 
-    // 7. 一時停止
     function pausePlaying() {
         if (!isPlaying) return; 
         isPlaying = false;
@@ -149,7 +125,6 @@ document.addEventListener('DOMContentLoaded', () => {
         clearInterval(progressInterval); 
     }
 
-    // 8. 次のコンテンツへ
     function nextContent() {
         currentContentIndex = (currentContentIndex + 1) % contents.length;
         
@@ -162,7 +137,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // 9. 前のコンテンツへ
     function prevContent() {
         currentContentIndex = (currentContentIndex - 1 + contents.length) % contents.length;
         
@@ -175,7 +149,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // 10. 再生状態をリセット（次の曲に移った時に呼ぶ）
     function resetPlayback() {
         clearInterval(progressInterval); 
         elapsedTime = 0;                 
@@ -189,7 +162,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    // 11. イベントリスナーを設定
     playPauseButton.addEventListener('click', () => {
         if (isPlaying) {
             pausePlaying();
@@ -201,14 +173,13 @@ document.addEventListener('DOMContentLoaded', () => {
     prevButton.addEventListener('click', prevContent);
     nextButton.addEventListener('click', nextContent);
 
-    // B:
     shareButton.addEventListener('click', async () => {
         const currentContent = contents[currentContentIndex];
         
         const shareData = {
             title: currentContent.title, 
             text: `「${currentContent.title}」をチェック！\nアーティスト: ${currentContent.artist}\n${currentContent.details.substring(0, 100)}...\n`, // 本文
-            url: window.location.href // このページ自体のURL
+            url: window.location.href 
         };
 
         if (navigator.share) {
@@ -219,12 +190,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.error('共有に失敗しました:', err);
             }
         } else {
-            // PCや非対応ブラウザの場合
             alert('お使いのブラウザは共有機能に対応していません。');
         }
     });
 
-    // 12. ページ読み込み時に、最初のコンテンツを表示
     updateContent();
-    pausePlaying(); // 最初は一時停止状態にしておく
+    pausePlaying();
 });
